@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from flask import Flask, render_template, request, url_for
 from sklearn.ensemble import RandomForestClassifier
 
-path = './static/Đánh-giá-khóa-học-Câu-trả-lời.xlsx'
+path = './static/data.xlsx'
 # Read data
 df = pd.read_excel(path)
 
