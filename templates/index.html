@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự đoán Ngành học</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Dự đoán Ngành học</h1>
+        <p><em><b>Chú thích:</b></em></p>
+        <p><em><b>Hoàn toàn đúng: 5, Gần như là đúng: 4, 
+            Chỉ đúng 1 nửa: 3, Chỉ đúng 1 vài trường hợp: 2,
+            Chưa bao giờ đúng: 1</b></em></p>
+        <form method="post">
+            <div class="form-group">
+                <label for="question1">1. Tôi có tính tự lập</label>
+                <select class="form-control" id="question1" name="question1">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question2">2. Tôi suy nghĩ thực tế</label>
+                <select class="form-control" id="question2" name="question2">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question3">3. Tôi là người thích nghi với môi trường mới</label>
+                <select class="form-control" id="question3" name="question3">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question4">4. Tôi có thể vận hành, điều khiển các máy móc thiết bị</label>
+                <select class="form-control" id="question4" name="question4">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question5">5. Tôi làm các công việc thủ công như gấp giấy, đan, móc,...</label>
+                <select class="form-control" id="question5" name="question5">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question6">6. Tôi thích tiếp xúc với thiên nhiên động vật cây cỏ</label>
+                <select class="form-control" id="question6" name="question6">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question7">7. Tôi thích những công việc sử dụng tay chân hơn là trí óc</label>
+                <select class="form-control" id="question7" name="question7">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question8">8. Tôi thích những công việc  thấy ngay kết quả</label>
+                <select class="form-control" id="question8" name="question8">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question9">9. Tôi thích những công việc ngoài trời hơn là trong văn phòng</label>
+                <select class="form-control" id="question9" name="question9">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question10">10. Tôi có tìm hiểu khám phá nhiều vấn đề mới</label>
+                <select class="form-control" id="question10" name="question10">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question11">11. Tôi có khả năng phân tích vấn đề</label>
+                <select class="form-control" id="question11" name="question11">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question12">12. Tôi biết suy nghĩ một cách mạch lạc, chặt chẽ</label>
+                <select class="form-control" id="question12" name="question12">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question13">13. Tôi thích thực hiện các thí nghiệm hay nghiên cứu</label>
+                <select class="form-control" id="question13" name="question13">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question14">14. Tôi có khả năng tổng hợp, khái quát, suy đoán những vấn đề</label>
+                <select class="form-control" id="question14" name="question14">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question15">15. Tôi thích những hoạt động điều tra, phân loại, kiểm tra, đánh giá</label>
+                <select class="form-control" id="question15" name="question15">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question16">16. Tôi tự tổ chức công việc của mình phải làm</label>
+                <select class="form-control" id="question16" name="question16">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question17">17. Tôi thích suy nghĩ về những vấn đề phức tạp, làm những công việc phức tạp</label>
+                <select class="form-control" id="question17" name="question17">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question18">18. Tôi có khả năng giải quyết các vấn đề</label>
+                <select class="form-control" id="question18" name="question18">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question19">19. Tôi là người dễ xúc động</label>
+                <select class="form-control" id="question19" name="question19">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question20">20. Tôi có óc tưởng tượng phong phú</label>
+                <select class="form-control" id="question20" name="question20">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question21">21. Tôi thích sự tự do, không theo những quy định, quy tắc</label>
+                <select class="form-control" id="question21" name="question21">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question22">22. Tôi có khả năng thuyết trình, diễn xuất</label>
+                <select class="form-control" id="question22" name="question22">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question23">23. Tôi có thể chụp hình, vẽ tranh, trang trí, điêu khắc</label>
+                <select class="form-control" id="question23" name="question23">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question24">24. Tôi có năng khiếu âm nhạc</label>
+                <select class="form-control" id="question24" name="question24">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question25">25. Tôi có khả năng viết , trình bày những ý tưởng của mình</label>
+                <select class="form-control" id="question25" name="question25">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question26">26. Tôi thích làm những công việc mới, những công việc đòi hỏi sự sáng tạo</label>
+                <select class="form-control" id="question26" name="question26">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question27">27. Tôi thoải mái bộc lộ những ý thích</label>
+                <select class="form-control" id="question27" name="question27">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question28">28. Tôi là người thân thiện, hay giúp đỡ người khác</label>
+                <select class="form-control" id="question28" name="question28">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question29">29. Tôi thích gặp gỡ làm việc với con người</label>
+                <select class="form-control" id="question29" name="question29">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question30">30. Tôi là người lịch sự, tử tế</label>
+                <select class="form-control" id="question30" name="question30">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question31">31. Tôi thích khuyên bảo, huấn luyện hay giảng giải cho người khác</label>
+                <select class="form-control" id="question31" name="question31">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question32">32. Tôi là người biết lắng nghe</label>
+                <select class="form-control" id="question32" name="question32">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question33">33. Tôi thích các hoạt động chăm sóc sức khỏe của bản thân và người khác</label>
+                <select class="form-control" id="question33" name="question33">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question34">34. Tôi thích các hoạt động vì mục tiêu chung của cộng đồng, xã hội</label>
+                <select class="form-control" id="question34" name="question34">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question35">35. Tôi mong muốn mình có thể đóng góp để xã hội tốt đẹp hơn</label>
+                <select class="form-control" id="question35" name="question35">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question36">36. Tôi có khả năng hoà giải, giải quyết những công việc mâu thuẫn</label>
+                <select class="form-control" id="question36" name="question36">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question37">37. Tôi là người có tính phiêu lưu mạo hiểm</label>
+                <select class="form-control" id="question37" name="question37">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question38">38. Tôi có tính quyết đoán</label>
+                <select class="form-control" id="question38" name="question38">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question39">39. Tôi là người năng động</label>
+                <select class="form-control" id="question39" name="question39">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question40">40. Tôi có khả năng diễn đạt, tranh luận và thuyết phục người khác</label>
+                <select class="form-control" id="question40" name="question40">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question41">41. Tôi thích các việc quản lý, đánh giá</label>
+                <select class="form-control" id="question41" name="question41">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question42">42. Tôi thường đặt ra các mục tiêu, kế hoạch trong cuộc sống</label>
+                <select class="form-control" id="question42" name="question42">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question43">43. Tôi thích gây ảnh hưởng đến người khác</label>
+                <select class="form-control" id="question43" name="question43">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question44">44. Tôi là người thích cạnh tranh, và muốn mình giỏi hơn người khác</label>
+                <select class="form-control" id="question44" name="question44">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question45">45. Tôi muốn người khác phải kính trọng, nể phục tôi</label>
+                <select class="form-control" id="question45" name="question45">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question46">46. Tôi là người có đầu óc sắp xếp, tổ chức</label>
+                <select class="form-control" id="question46" name="question46">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question47">47. Tôi có tính cẩn trọng</label>
+                <select class="form-control" id="question47" name="question47">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question48">48. Tôi là người chu đáo, chính xác và đáng tin cậy</label>
+                <select class="form-control" id="question48" name="question48">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question49">49. Tôi thích công việc tính toán sổ sách, ghi chép số liệu</label>
+                <select class="form-control" id="question49" name="question49">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question50">50. Tôi thích các công việc lưu trữ, phân loại, cập nhật thông tin</label>
+                <select class="form-control" id="question50" name="question50">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question51">51. Tôi thường đặt ra mục tiêu, kế hoạch trong cuộc sống</label>
+                <select class="form-control" id="question51" name="question51">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question52">52. Tôi thích dự kiến các khoản thu chi</label>
+                <select class="form-control" id="question52" name="question52">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question53">53. Tôi thích lập thời khóa biểu, sắp xếp lịch làm việc</label>
+                <select class="form-control" id="question53" name="question53">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question54">54. Tôi thích làm việc với các con số, làm việc theo hướng dẫn, quy trình</label>
+                <select class="form-control" id="question54" name="question54">
+                    {% for j in range(1, 6) %}
+                    <option value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
