@@ -1,0 +1,19 @@
+* {
+  font-size: 20px;
+}
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 110px;
+  right: 300px;
+  z-index: 999;
+  /* Đảm bảo nút hiển thị trên các phần tử khác */
+}
+
+#scroll-to-bottom {
+  position: fixed;
+  bottom: 50px;
+  right: 300px;
+  z-index: 999;
+  /* Đảm bảo nút hiển thị trên các phần tử khác */
+}
